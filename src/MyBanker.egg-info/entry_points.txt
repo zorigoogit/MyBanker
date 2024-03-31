@@ -1,0 +1,2 @@
+[console_scripts]
+MyBanker = MyBanker_Main:main
