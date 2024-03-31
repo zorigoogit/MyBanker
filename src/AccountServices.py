@@ -14,4 +14,7 @@ class AccountServices:
     
     def check_account_balance(self):
         return_value = {}
-        return return_value  
+        return_value["Status"] = "OK"
+        return_value["Message"] = f"Your current balance = {self.account_balance}"
+        return_value["Value"] = self.account_balance
+        return return_value
