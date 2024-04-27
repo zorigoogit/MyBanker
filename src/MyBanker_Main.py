@@ -14,14 +14,14 @@ def main():
     
     while True:
         try:
-            print("Select your account service :")
+            print("Select your account service:")
             print("1. Deposit Money")
             print("2. Withdraw Money")
             print("3. Check Balance")
             print("4. Exit")
 
 
-            choice = input("Enter the operation number : ")
+            choice = input("Enter the operation number: ")
 
             if choice == "1":
                 transaction_amount = float(input("Enter deposit transaction amount: "))

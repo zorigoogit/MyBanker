@@ -7,10 +7,10 @@ class AccountServices:
     def transaction_deposit(self,deposit_amount):
         return_value = {}
         try:
-            # if deposit_amount <= 0:
-            #     return_value["Status"] = "ERROR"
-            #     return_value["Message"] = f"The transaction could not be completed: The amount must be positive!"
-            #     return return_value
+            if deposit_amount <= 0:
+                return_value["Status"] = "ERROR"
+                return_value["Message"] = f"The transaction could not be completed: The amount must be positive!"
+                return return_value
 
             self.account_balance += deposit_amount
 
@@ -27,16 +27,16 @@ class AccountServices:
         return_value = {}
         try:
             
-            # if withdraw_amount <= 0:
-            #     return_value["Status"] = "ERROR"
-            #     return_value["Message"] = f"The transaction could not be completed: The amount must be positive!"            
-            #     return return_value 
+            if withdraw_amount <= 0:
+                return_value["Status"] = "ERROR"
+                return_value["Message"] = f"The transaction could not be completed: The amount must be positive!"            
+                return return_value 
 
-            # if self.account_balance < withdraw_amount:
+            if self.account_balance < withdraw_amount:
 
-            #     return_value["Status"] = "ERROR"
-            #     return_value["Message"] = f"The transaction could not be completed: Insufficient account balance!"            
-            #     return return_value 
+                return_value["Status"] = "ERROR"
+                return_value["Message"] = f"The transaction could not be completed: Insufficient account balance!"            
+                return return_value 
             
             self.account_balance -= withdraw_amount
 
