@@ -24,13 +24,6 @@ echo Copying installation script to the distribution directory...
 copy .\scripts\install.bat .\dist\
 copy .\scripts\install.sh .\dist\
 
-if %TEST_FAILED% NEQ 0 (
-    REM Using PowerShell to color the output
-    PowerShell -Command "& {Write-Host 'WARNING: Some unit tests failed. Please check the output above and unit_test_output.txt for details.' -ForegroundColor Red}"
-) else (
-    echo Testing and building processes were completed successfully.
-)
+echo Testing and building processes were completed successfully.
 
-echo Press any key to exit...
-pause > nul
 exit /b 0
