@@ -44,7 +44,7 @@ def main():
         except Exception as e:
             print(f"\nThe transaction could not be completed: {e}\n")
         finally:
-            print("\n--------------------------------------------------------------------------------\n")    
+            print("\n---------------------------------------------------------------------------------\n")    
 
 
 if __name__ == '__main__':
