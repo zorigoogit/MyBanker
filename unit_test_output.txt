@@ -1,0 +1,64 @@
+
+Test Case 1: Deposit testing -----------------------------------------
+Inital balance =  1000 
+
+Deposit = 800
+Your doposit transaction has been completed successfully.
+Your current balance = 1800
+Deposit = 300
+Your doposit transaction has been completed successfully.
+Your current balance = 2100
+
+Expected balance =  2100
+Current balance  =  2100
+Passed....
+
+
+Test Case 2: Withdraw testing ----------------------------------------
+Inital balance =  1000 
+
+Withdraw = 100
+Your withdrawal transaction has been completed successfully.
+Your current balance = 900
+Withdraw = 50
+Your withdrawal transaction has been completed successfully.
+Your current balance = 850
+
+Expected balance =  850
+Current balance  =  850
+Passed....
+
+
+Test Case 3: Mixed testing -------------------------------------------
+Inital balance =  1000 
+
+Deposit = 2000
+Your doposit transaction has been completed successfully.
+Your current balance = 3000
+Withdraw = 200
+Your withdrawal transaction has been completed successfully.
+Your current balance = 2800
+
+Expected balance =  2800
+Current balance  =  2800
+Passed....
+
+
+Test Case 4: Insufficient account balance ----------------------------
+Inital balance =  1000
+Withdraw = 5000
+Your withdrawal transaction has been completed successfully.
+Your current balance = -4000
+Expected balance =  1000
+Current balance  =  -4000
+Failed....!
+
+
+Test Case 5: Deposit testing with negative amount --------------------
+Inital balance =  1000
+Deposit = -100
+Your doposit transaction has been completed successfully.
+Your current balance = 900
+Expected balance =  1000
+Current balance.  =  900
+Failed....!
