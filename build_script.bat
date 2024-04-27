@@ -3,18 +3,15 @@
 REM Clean previous builds
 python setup.py clean --all
 
-REM Install wheel if not installed already
-pip install --upgrade wheel
-
 REM Run unit tests
 echo.
 echo Unit testing process is started ...
 echo *******************************************************************************
 python -m unittest discover -s . -p "unit_test.py" > unit_test_output.txt
 SET TEST_FAILED=%ERRORLEVEL%
-
 IF %TEST_FAILED% NEQ 0 (
     echo Unit tests failed, check the log at unit_test_output.txt.
+    
     exit /b %TEST_FAILED%
 )
 
@@ -25,7 +22,6 @@ echo Building process is started ...
 echo *******************************************************************************
 python setup.py sdist bdist_wheel
 SET BUILD_FAILED=%ERRORLEVEL%
-
 IF %BUILD_FAILED% NEQ 0 (
     echo Build failed.
     exit /b %BUILD_FAILED%
