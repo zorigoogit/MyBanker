@@ -14,7 +14,7 @@ def main():
     
     while True:
         try:
-            print("Select your account service:")
+            print("Select your account service :")
             print("1. Deposit Money")
             print("2. Withdraw Money")
             print("3. Check Balance")
