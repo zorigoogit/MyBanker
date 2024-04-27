@@ -10,7 +10,7 @@ echo ***************************************************************************
 python -m unittest discover -s . -p "unit_test.py" > unit_test_output.txt
 SET TEST_FAILED=%ERRORLEVEL%
 IF %TEST_FAILED% NEQ 0 (
-    echo Unit tests failed, check the log at unit_test_output.txt.
+    echo Unit tests failed!
     
     exit /b %TEST_FAILED%
 )
@@ -23,7 +23,7 @@ echo ***************************************************************************
 python setup.py sdist bdist_wheel
 SET BUILD_FAILED=%ERRORLEVEL%
 IF %BUILD_FAILED% NEQ 0 (
-    echo Build failed.
+    echo Build failed!
     exit /b %BUILD_FAILED%
 )
 
