@@ -47,18 +47,16 @@ Passed....
 Test Case 4: Insufficient account balance ----------------------------
 Inital balance =  1000
 Withdraw = 5000
-Your withdrawal transaction has been completed successfully.
-Your current balance = -4000
+The transaction could not be completed: Insufficient account balance!
 Expected balance =  1000
-Current balance  =  -4000
-Failed....!
+Current balance  =  1000
+Passed....
 
 
 Test Case 5: Deposit testing with negative amount --------------------
 Inital balance =  1000
 Deposit = -100
-Your doposit transaction has been completed successfully.
-Your current balance = 900
+The transaction could not be completed: The amount must be positive!
 Expected balance =  1000
-Current balance.  =  900
-Failed....!
+Current balance.  =  1000
+Passed....

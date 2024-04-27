@@ -4,7 +4,7 @@ REM Clean previous builds
 python setup.py clean --all
 
 REM Install wheel if not installed already
-pip install wheel
+pip install --upgrade wheel
 
 REM Run unit tests
 echo.
@@ -17,6 +17,7 @@ IF %TEST_FAILED% NEQ 0 (
     echo Unit tests failed, check the log at unit_test_output.txt.
     exit /b %TEST_FAILED%
 )
+
 
 REM Build the package
 echo.
